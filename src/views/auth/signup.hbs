@@ -1,0 +1,103 @@
+<div class="min-h-full flex" style="height: calc(100vh - 64px);">
+    <div class=" gradientCont2 flex-1 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+        <div class="gradientCont3 mx-auto w-full max-w-sm lg:w-96 shadow-xl p-4 rounded-lg">
+            <div class="flex flex-col justify-center items-center">
+                <a class="no-underline hover:no-underline lg:text-4xl" href="/">
+                <img class="h-20 w-auto" src="/images/mexaverse-logo.png"
+                    alt="Workflow"></a>
+                <h2 class="mt-6 text-3xl font-extrabold text-white">
+                    Regístrate
+                </h2>
+                <p class="mt-2 text-center text-sm text-white">
+                    Or
+                    <a href="/auth/login" style="background-color: #d2458a" class="text-white hover:bg-pink-500 hover:text-gray-50 px-3 py-2 rounded-md block mb-2 text-xl font-black">
+                        Login
+                    </a>
+                </p>
+            </div>
+
+            <div class="mt-8">
+                <div>
+                    <div class="mt-6 relative">
+                        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">
+                                O continue with
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <form action="/auth/signup" method="POST" class="space-y-6">
+                        <div>
+                            <label for="userName" class="block text-sm font-medium text-white">
+                                Nombre
+                            </label>
+                            <div class="mt-1">
+                                <input id="userName" name="userName" type="text" autocomplete="name" required
+                                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="MetaTaco">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="userEmail" class="block text-sm font-medium text-white">
+                                Email
+                            </label>
+                            <div class="mt-1">
+                                <input id="userEmail" name="userEmail" type="email" autocomplete="email" required
+                                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="metataco@mexaverse.co">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label for="password" class="block text-sm font-medium text-white">
+                                Contraseña:
+                            </label>
+                            <div class="mt-1">
+                                <input id="password" name="password" type="password" autocomplete="current-password"
+                                    required
+                                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Holataco1">
+                            </div>
+                        </div>
+
+                                                <div>
+                            <label for="userImage" class="block text-sm font-medium text-white">
+                                Imagen de Perfil URL:
+                            </label>
+                            <div class="mt-1">
+                                <input id="userImage" name="userImage" type="userImage" autocomplete="name" required
+                                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="https://i.ibb.co/cY0Fkhb/funny-mexican-tacos-sticker.jpg">
+                            </div>
+                        </div>
+
+                                                <div>
+                            <label for="userShortBio" class="block text-sm font-medium text-white">
+                                Dinos algo de ti:
+                            </label>
+                            <div class="mt-1">
+                                <input id="userShortBio" name="userShortBio" type="text" autocomplete="name" required
+                                    class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="ME GUSTAN MUCHO LOS TACOS">
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit"
+                                style="background-color: #d2458a" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Sign up
+                            </button>
+                        </div>
+                        {{#if msg}}
+                        <p class="text-red-400"> {{msg}} </p>
+                        {{/if}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden lg:block relative w-0 flex-1">
+        <img class="absolute inset-0 h-full w-full object-cover"
+            src="https://w0.peakpx.com/wallpaper/648/222/HD-wallpaper-mars-o-naut-astronaut-cosmos-cryptoart-milkyway-neon-nft-nfts-space-universe.jpg" alt="">
+    </div>
+</div>

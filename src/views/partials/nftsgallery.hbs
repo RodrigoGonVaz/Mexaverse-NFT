@@ -1,0 +1,33 @@
+
+<div class="beers-container">
+
+  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <img class="w-full" src="{{nftImage}}" alt="{{nftTitle}}" />
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">{{nftTitle}}</div>
+      <p class="text-gray-700 text-base">
+        {{shortDescription}}
+      </p>
+      <p class="text-gray-700 text-base">
+        User Id: {{data.userName}}
+      </p>
+      <p class="text-gray-700 text-base">
+        $IHC: {{nftPrice}}.00
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+      {{#each this.nftHashTag}}
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{this}}</span>
+      {{/each}}
+       <a href="/nfts/{{_id}}/buy" style="background-color: #d2458a"  class="mb-9 bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">$COMPRAR</a>
+       
+          <button id="favButton" class="mt-4 mb-4 mr-4" type="submit" name="favNft">
+            <svg xmlns="http://www.w3.org/2000/svg" id="favIcon" class="h-6 w-6 text-pink-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </button>
+       </form>
+    </div>
+  </div>
+  <hr/>
+</div>

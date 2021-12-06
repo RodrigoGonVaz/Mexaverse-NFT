@@ -1,0 +1,59 @@
+{{!-- Login view --}}
+<div class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+<div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 shadow-xl" style="height: calc(100vh - 64px);">
+   <div class="gradientCont max-w-md w-full space-y-8 shadow-xl p-14 rounded-lg">
+        <div>
+            <a class="no-underline hover:no-underline lg:text-4xl" href="/">
+            <img class="mx-auto h-24 w-auto" src="/images/mexaverse-logo.png"
+                alt="Workflow"></a>
+            <h2 class="mt-6 text-center text-3xl font-extrabold text-white">
+                Entra a Mexaverse: 
+            </h2>
+            <p class="mt-2 text-center text-sm text-white">
+                O
+                <a href="/auth/signup" class="text-white hover:bg-pink-500 hover:text-gray-50 px-3 py-2 rounded-md block mb-2 text-xl font-black">
+                    Registrate
+                </a>
+                <hr>
+            </p>
+        </div>
+        <form class="mt-8 space-y-6" action="/auth/login" method="POST">
+            <input type="hidden" name="remember" value="true">
+            <div class="rounded-md shadow-sm -space-y-px">
+                <div>
+                    <label for="userEmail" class="sr-only">Email</label>
+                    <input id="userEmail" name="userEmail" type="email" autocomplete="email" required
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Email address">
+                </div>
+                <div>
+                    <label for="password" class="sr-only">Contraseña</label>
+                    <input id="password" name="password" type="password" autocomplete="current-password" required
+                        class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Password">
+                </div>
+            </div>
+
+            <div>
+                <button type="submit"
+                   style="background-color: #d2458a" class="mt-12 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white hover:bg-pink-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-700">
+                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                        <!-- Heroicon name: solid/lock-closed -->
+                        <svg class="h-5 w-5 text-green-50 group-hover:text-green-50"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                    Sign in
+                </button>
+            </div>
+            {{#if msg}}
+            <p class="text-red-400"> {{msg}} </p>
+            {{/if}}
+        </form>
+    </div>
+</div>
+</div>

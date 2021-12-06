@@ -1,0 +1,79 @@
+
+
+{{!-- <div class="gradientCont4">
+    <div id="profile" class="gradientCont3 w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+      <div class="p-4 md:p-12 text-center lg:text-left">
+
+<img src="{{dataBuy.nftImage}}">
+<p>Title: {{dataBuy.nftTitle}}</p>
+<p>Description: {{dataBuy.shortDescription}}</p>
+<p>#{{dataBuy.nftHashTag}}</p>
+<p>$IHC: {{dataBuy.nftPrice}}</p>
+<img class="object-right-center" src="eth.png" alt="rhtqrl">
+<p>Address: 0xc4d77f0f6a3a871ea99c24a4fa7417bd7355b371</p>
+        </div>
+    </div> --}}
+
+<section class="bg-white border-b py-8">
+      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          
+        </h1>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        
+        <div style="background-color: #41B493" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+            
+               <div class="pt-10 flex justify-center">
+                <img src="{{dataBuy.nftImage}}" alt="algonft"> 
+              </div>
+              <div class="pt-5 w-full font-bold text-xl text-justify text-gray-800 px-6">
+                <b style="color: #0a7557">Descripción:</b> {{dataBuy.shortDescription}}
+              </div>
+              <p class="text-center pt-8 text-base px-6 mb-5">
+               <b class="text-center" style="color: #0a7557"> $IHC: {{dataBuy.nftPrice}}.00</b>
+              </p>
+            
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div  class="flex items-center justify-center">
+             <a href="/nfts"> <button style="background-color: #d2458a" class="mx-auto lg:mx-0 hover:underline  text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none  transition hover:scale-105 duration-300 ease-in-out">
+                REGRESAR
+              </button></a>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: #41B493" class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">         
+                
+                <div class="pt-10 flex justify-center">
+                <img class="flex " style="height: 210px" src="/images/wallet-rod.jpg" alt="ETH Wallet">
+                </div>  
+            
+              <div class="pt-5 w-full font-bold text-xl text-left text-gray-800 px-6">
+                 <b style="color: #0a7557">Dirección ETH Wallet:</b> 0xfa8e00c4fe77cbf725ad2a5fec471abf4c6fa329
+                 <hr>
+                 <div class="pt-10 flex justify-center">
+                 <img src="/images/wallet-martin.png" alt="ETH Wallet">
+                 </div>   
+                 <b style="color: #0a7557">Dirección ETH Wallet:</b> 0x94ec94c60f61eb5bbccffc9efc7b0c5463dea77f
+              </div>
+              <p class="pt-8 text-gray-800 text-base px-6 mb-5">
+                <b class="text-center" style="color: #0a7557">Pagar: $IHC:{{dataBuy.nftPrice}}.00</b>
+              </p>
+            
+          </div>
+          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div  class="flex items-center justify-center">
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> <button style="background-color: #d2458a" class="mx-auto lg:mx-0 hover:underline  text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none  transition hover:scale-105 duration-300 ease-in-out">
+                $PAGADO
+              </button></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>

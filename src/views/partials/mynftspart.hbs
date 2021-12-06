@@ -1,0 +1,31 @@
+<div class="beers-container">
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="{{nftImage}}" alt="{{nftTitle}}">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">{{nftTitle}}</div>
+    <p class="text-gray-700 text-base">
+      {{shortDescription}}
+    </p>
+    <p class="text-gray-700 text-base">
+      User Id: {{data.userName}}
+    </p>
+    <p class="text-gray-700 text-base">
+      $IHC: {{nftPrice}}.00
+    </p>
+  </div>
+    <div class="px-6 pt-4 pb-2">
+      {{#each this.nftHashTag}}
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{this}}</span>
+      {{/each}}
+        <a href="/nfts/{{_id}}/edit" style="background-color: #d2458a"  class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2">EDITAR NFT</a>
+       
+       
+        <form  method="POST" action="/nfts/{{this._id}}/delete" onclick="return confirm('Estas segur@ que quieres eliminar este NFT?');">
+          <button style="background-color: #d24589c5"  class="mb-4 text-white text-xs py-2 px-2 rounded-full">ELIMINAR 🗑 </button>
+        </form>
+    </div>
+  </div>
+  <hr>
+</div>
+

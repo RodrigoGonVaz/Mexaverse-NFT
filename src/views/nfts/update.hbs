@@ -1,0 +1,161 @@
+{{!-- 
+
+<form action="/nfts/{{data._id}}/edit" method="POST">
+    <label>NFT Title</label>
+    <input type="text" name="nftTitle" value="{{data.nftTitle}}" />
+
+    <br />
+
+    <label>NFT Price</label>
+    <textarea type="Number" name="nftPrice">
+		{{data.nftPrice}}
+	</textarea>
+
+    <br /> --}}
+{{!-- 
+    <label>NFT Image</label>
+    <input type="String" name="nftImage" value="{{data.nftImage}}" />
+
+    <br /> --}}
+
+    {{!-- <label>Short Description</label>
+    <input type="String" name="shortDescription" value="{{data.shortDescription}}" /> --}}
+
+{{!-- {{#each data}}
+    <label>Hashtags</label>
+    <input type="String" name="nftHashTag" value="{{nftHashTag}}" />
+{{/each}}
+    <br />
+
+    <button>
+        Guardar nuevos cambios
+    </button>
+
+	{{#if msg}}
+	<p class="text-red-400"> {{msg}} </p>
+	{{/if}}
+
+
+</form> --}}
+
+{{! //--------HBS CREATE.HBS------- }}
+<!-- component -->
+<body class="font-mono bg-green-200">
+		<!-- Container -->
+		<div class="container mx-auto">
+			<div class="flex justify-center my-8">
+				<!-- Row -->
+				<div class="w-full xl:w-3/4 lg:w-11/12 flex">
+					<!-- Col -->
+					<div
+						class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
+						style="background-image: url('{{data.nftImage}}')"
+					></div>
+					<!-- Col -->
+					<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
+                        <p class="text-xs">NFT ID: {{data._id}}</p>
+						<h3 class="pt-4 text-2xl text-center">EDIT Your NFT 🌮</h3>
+		<form action="/nfts/{{data._id}}/edit" method="POST" class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
+							<div class="mb-4 md:flex md:justify-between">
+								<div class="mb-4 md:mr-2 md:mb-0">
+									<label class="block mb-2 text-sm font-bold text-gray-700" for="nftTitle">
+										NFT Title:
+									</label>
+									<input name="nftTitle" 
+										class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+										id="nftTitle"
+										type="text"
+										value="{{data.nftTitle}}"/>
+								</div>
+								<div class="md:ml-2">
+									<label class="block mb-2 text-sm font-bold text-gray-700" for="nftPrice">
+										Price ($IHC):
+									</label>
+									<input
+                                        name="nftPrice"
+										class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+										id="nftPrice"
+										type="text"
+										value="{{data.nftPrice}}"/>
+								</div>
+							</div>
+							<div class="mb-4">
+								<label class="block mb-2 text-sm font-bold text-gray-700" for="shortDescription">
+									Short Description
+								</label>
+                <textarea 
+                class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                name="shortDescription" 
+                rows="5" 
+                cols="50"
+                id="shortDescription"
+                >{{data.shortDescription}}
+                </textarea>
+							</div>
+              
+								<div class="mb-4 md:mr-2 md:mb-0">
+									<label class="block mb-2 text-sm font-bold text-gray-700" for="nftImage">
+										NFT URL Image
+									</label>
+									<input
+                                        name="nftImage"
+										class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+										id="nftImage"
+										type="text"
+										value="{{data.nftImage}}"/>
+								</div>
+
+								<div style="padding-bottom: 15px;" class="md:ml-2">
+									<label class="block mb-2 text-sm font-bold text-gray-700" for="nftUsername">
+										User ID:
+									</label>
+                  <select class="border border-red-500 rounded shadow" name="nftUsername">
+                    <option disable selected value="">--Selecciona un TacoUsuario--</option>
+                    <option value="{{data._id}}"> {{data.nftUsername}} </option>
+                  </select>
+								</div>
+
+              <div class="mb-4 md:flex md:justify-between">
+
+                <div class="mb-4 md:mr-2 md:mb-0">
+					{{#each data.nftHashTag}}
+					<label class="block mb-2 text-sm font-bold text-gray-700" for="nftHashTag">
+					#Hashtag:
+					</label>
+						<input
+						 name="nftHashTag"
+						 class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+						 id="nftHashTag"
+						 type="text"
+						 value="{{this}}"/>
+					{{/each}}
+				</div>
+              </div>
+							
+				<div class="mb-6 text-center">
+					<button
+						style="background-color: #d2458a" class="w-full px-4 py-2 font-bold text-white  rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+						type="submit">
+						Edit NFT 🎨
+					</button>
+					{{#if msg}}
+						<p class="text-red-400"> {{msg}} </p>
+					{{/if}}
+				</div>
+			
+			<hr class="mb-6 border-t" />
+
+							<div class="text-center">
+								<a
+									class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+									href="/nfts/my-nfts"
+								>
+									My NFTs Gallery
+								</a>
+							</div>
+		</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>

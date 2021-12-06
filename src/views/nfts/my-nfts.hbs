@@ -1,0 +1,12 @@
+{{!-- hbs my-nft.hbs --}}
+
+{{!-- {{#each data}} --}}
+{{!-- <div style="background-color: #41B493" class="w-full md:w-1/3 p-6 flex flex-row flex-grow flex-shrink">
+          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"> --}}
+
+    {{#each data.nft}}
+        {{> mynftspart this}}
+    {{/each}}
+
+{{!-- </div>
+</div> --}}
